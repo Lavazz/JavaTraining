@@ -1,5 +1,7 @@
 public class AverageValue {
     public static void main(String[] args) {
-        AverageValueLogic.splitNumber(345678);
+        int number = 345678;
+        AverageValueLogic.splitNumber(number);
+
     }
 }
