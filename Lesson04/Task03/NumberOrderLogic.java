@@ -1,16 +1,25 @@
 public class NumberOrderLogic {
-    public static boolean checkOrder(int number) {
-        int a = number / 1000;
-        int b = (number / 100) % 10;
-        int c = (number / 10) % 10;
-        int d = number % 10;
-        return ((a > b) && (b > c) && (c > d)) || ((a < b) && (b < c) && (c < d));
-    }
-}
+    public static boolean increasingSequence(int number) {
+        int digit4 = number % 10; //4th number
+        number /= 10;
+        int digit3 = number % 10; //third number
+        number /= 10;
+        int digit2 = number % 10; //second number
+        number /= 10;
+        int digit1 = number % 10; //first number
 
-class PrintResult {
-    public static void print(int number, boolean result) {
-        String str = (result == true) ? "forms" : "does't form";
-        System.out.printf("%d %s a sequence of numbers", number, str);
+        return (digit1 < digit2) && (digit2 < digit3) && (digit3 < digit4);
+    }
+
+    public static boolean decreasingSequence(int number) {
+        int digit4 = number % 10; //4th number
+        number /= 10;
+        int digit3 = number % 10; //third number
+        number /= 10;
+        int digit2 = number % 10; //second number
+        number /= 10;
+        int digit1 = number % 10; //first number
+
+        return (digit1 > digit2) && (digit2 > digit3) && (digit3 > digit4);
     }
 }

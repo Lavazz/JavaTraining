@@ -1,6 +1,7 @@
 public class RingSpace {
     public static void main(String[] args) {
-        double space = RingSpaceLogic.countSpace(12.0, 8.0);
+        double r1 = 12.0, r2 = 8.0;
+        double space = RingSpaceLogic.countSpace(r1, r2);
         Printer.print(space);
     }
 }
