@@ -1,5 +1,5 @@
 public class Printer {
-    public static void print(long orderedNumber, long number) {
-        System.out.printf("\nReverse order of number %d is : %d", number, orderedNumber);
+    public static void print(double average, String s, int number) {
+        System.out.printf("\nAverage %s of number %d is : %.2f", s, number, average);
     }
 }
