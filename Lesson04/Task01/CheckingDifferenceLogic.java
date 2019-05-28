@@ -4,7 +4,7 @@ class ChekingDifferenceLogic {
     }
 
     public static boolean checkDifference(double a, double b, double c) {
-        return c
+        return a != b && b != c && a != c;
     }
 }
 
