@@ -1,5 +1,5 @@
 public class AverageValueLogic {
-    private static final double numCount = 6.0;
+    private static final double NUM_COUNT = 6.0;
 
     public static double countAvarageArithmetic(int number) {
         int digit6 = number % 10; //6th number
@@ -14,7 +14,7 @@ public class AverageValueLogic {
         number /= 10;
         int digit1 = number % 10; //first number
 
-        return (digit1 + digit2 + digit3 + digit4 + digit5 + digit6) / numCount;
+        return (digit1 + digit2 + digit3 + digit4 + digit5 + digit6) / NUM_COUNT;
     }
 
     public static double countAvarageGeometric(int number) {
@@ -30,7 +30,7 @@ public class AverageValueLogic {
         number /= 10;
         int digit1 = number % 10; //first number
 
-        return Math.pow((digit1 * digit2 * digit3 * digit4 * digit5 * digit6), 1.0 / numCount);
+        return Math.pow((digit1 * digit2 * digit3 * digit4 * digit5 * digit6), 1.0 / NUM_COUNT);
 
     }
 }
