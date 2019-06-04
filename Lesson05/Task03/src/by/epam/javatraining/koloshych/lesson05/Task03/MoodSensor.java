@@ -1,12 +1,10 @@
-package by.epam.javatraining.koloshych.lesson05.Task03;
-
-import java.util.Random;
+package by.epam.javatraining.koloshych.lesson05.task03;
 
 public class MoodSensor {
     public static void main(String[] args) {
-        Random random = new Random();
-        int ratingMood = random.nextInt(11);
-        char mood = MoodSensorLogic.identifyMood(ratingMood);
+        String mood = MoodSensorLogic.identifyMood();
         View.print(mood);
     }
 }
+
+

@@ -1,7 +1,13 @@
 package by.epam.javatraining.koloshych.lesson05.Task04;
 
 public class CalenderLogic {
-    private static final int LAST_MONTH = 12;
+    public static final int LAST_MONTH = 12;
+    public static final int JANNUARY_DAY = 31;
+    public static final int APRIL_DAY = 30;
+    public static final int FEBRUARY_LEAP_DAY = 29;
+    public static final int FEBRUARY_USUAL_DAY = 28;
+    public static final int FIRSTL_DAY = 1;
+    public static final int FIRSTL_MONTH = 1;
 
     public static int giveNewDay(int day, int month, int year) {
         int lastDay = 0;
@@ -14,58 +20,61 @@ public class CalenderLogic {
             case 8:
             case 10:
             case 12:
-                lastDay = 31; break;
+                lastDay = JANNUARY_DAY;
+                break;
             case 4:
             case 6:
             case 9:
             case 11:
-                lastDay = 31; break;
+                lastDay = APRIL_DAY;
+                break;
             case 2:
                 switch (year % 4) {
                     case 1:
                     case 2:
                     case 3:
-                        lastDay = 28; break;
+                        lastDay = FEBRUARY_USUAL_DAY; break;
                     case 0:
                         if (year % 400 == 0) {
-                            lastDay = 29; break;
+                            lastDay = FEBRUARY_LEAP_DAY; break;
                         } else if (year % 100 == 0) {
-                            lastDay = 28; break;
+                            lastDay = FEBRUARY_USUAL_DAY; break;
                         } else {
-                            lastDay = 29; break;
+                            lastDay = FEBRUARY_LEAP_DAY;  break;
                         }
-                } break;
+                }
+                break;
         }
 
-        if (day >= 1 && day <= lastDay) {
+        if (day >= FIRSTL_DAY && day <= lastDay) {
             if (day == lastDay) {
-                day = 1;
+                day = FIRSTL_DAY;
             } else {
                 day++;
             }
-        }else {
-            day=0;
+        } else {
+            day = 0;
         }
         return day;
     }
 
     public static int giveNewMonth(int newDay, int month) {
         if (month >= 1 && month <= LAST_MONTH) {
-            if (newDay == 1) {
+            if (newDay == FIRSTL_DAY) {
                 month++;
             }
 
             if (month == 13) {
-                month = 1;
+                month = FIRSTL_MONTH;
             }
-        }else{
-            month=0;
+        } else {
+            month = 0;
         }
         return month;
     }
 
     public static int giveNewYear(int newMonth, int year) {
-        if (newMonth == 1) {
+        if (newMonth == FIRSTL_MONTH) {
             year++;
         }
         return year;

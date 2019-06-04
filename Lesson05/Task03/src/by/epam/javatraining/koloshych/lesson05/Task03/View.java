@@ -1,9 +1,9 @@
-package by.epam.javatraining.koloshych.lesson05.Task03;
+package by.epam.javatraining.koloshych.lesson05.task03;
 
 public class View {
-    public static void print(char mood) {
-        System.out.printf("You mood is :%c", mood);
 
+    public static void print(String mood) {
+        System.out.printf("You mood is %s", mood);
     }
 }
 
