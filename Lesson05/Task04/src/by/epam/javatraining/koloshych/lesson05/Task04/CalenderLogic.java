@@ -2,7 +2,6 @@ package by.epam.javatraining.koloshych.lesson05.Task04;
 
 public class CalenderLogic {
     public static final int LAST_MONTH = 12;
-    public static final int JANNUARY_DAY = 31;
     public static final int APRIL_DAY = 30;
     public static final int FEBRUARY_LEAP_DAY = 29;
     public static final int FEBRUARY_USUAL_DAY = 28;
@@ -10,18 +9,9 @@ public class CalenderLogic {
     public static final int FIRSTL_MONTH = 1;
 
     public static int giveNewDay(int day, int month, int year) {
-        int lastDay = 0;
+        int lastDay=31;
 
         switch (month) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
-                lastDay = JANNUARY_DAY;
-                break;
             case 4:
             case 6:
             case 9:

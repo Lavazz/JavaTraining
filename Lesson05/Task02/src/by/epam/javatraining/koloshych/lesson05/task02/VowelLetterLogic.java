@@ -17,4 +17,20 @@ public class VowelLetterLogic {
         }
         return result;
     }
+
+    public static boolean isVowelTwo(char letter) {
+        char letterLover = Character.toLowerCase(letter);
+        return "aeiouy".contains(Character.toString(letterLover));
+    }
+
+    public static boolean isVowelThree(char letter) {
+        char letterLover = Character.toLowerCase(letter);
+        char [] vowel = {'a', 'e', 'i', 'o', 'u', 'y'};
+        for(char v: vowel){
+            if(v==letterLover){
+                return true;
+            }
+        }
+        return false;
+    }
 }
