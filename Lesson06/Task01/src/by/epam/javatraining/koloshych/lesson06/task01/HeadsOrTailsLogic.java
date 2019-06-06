@@ -3,9 +3,10 @@ package by.epam.javatraining.koloshych.lesson06.task01;
 import java.util.Random;
 
 public class HeadsOrTailsLogic {
-   static Random random = new Random();
-        public static int happenHeads(int count) {
-        final int VARIANTS=2;
+
+    public static int happenHeads(int count) {
+        Random random = new Random();
+        final int VARIANTS = 2; //0- Heads, 1- Tails
         count = count > 0 ? count : -count;
         int countHeads = 0;
         for (int i = 0; i <= count; i++) {
@@ -17,10 +18,6 @@ public class HeadsOrTailsLogic {
         return countHeads;
     }
 
-    public static int happenTails(int count) {
-        count = count > 0 ? count : -count;
-        return count - happenHeads(count);
-    }
 }
 
 
