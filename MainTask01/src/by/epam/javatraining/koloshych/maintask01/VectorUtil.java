@@ -39,7 +39,7 @@ public class VectorUtil {
     }
 
     public static double countAverageGeometric(double[] vector) {
-        int mul = 1;
+        double mul = 1;
         //multiply all elements of array
         for (double i : vector) {
             mul *= i;
@@ -101,7 +101,8 @@ public class VectorUtil {
         return -1;
     }
 
-    public static double binarySearch(double[] vector, double number) {
+    public static int binarySearch(double[] vector, double number) {
+        //sort the array
         doInsertionSort(vector);
         int firstIndex = 0;
         int lastIndex = vector.length - 1;
@@ -246,21 +247,21 @@ public class VectorUtil {
         return vector;
     }
 
-    public static int partition(double[] array, int start, int end) {
-        double pivot = array[end];
+    public static int partition(double[] vector, int start, int end) {
+        double pivot = vector[end];
 
         for (int i = start; i < end; i++) {
-            if (array[i] < pivot) {
-                double temp = array[start];
-                array[start] = array[i];
-                array[i] = temp;
+            if (vector[i] < pivot) {
+                double temp = vector[start];
+                vector[start] = vector[i];
+                vector[i] = temp;
                 start++;
             }
         }
 
-        double temp = array[start];
-        array[start] = pivot;
-        array[end] = temp;
+        double temp = vector[start];
+        vector[start] = pivot;
+        vector[end] = temp;
 
         return start;
     }
