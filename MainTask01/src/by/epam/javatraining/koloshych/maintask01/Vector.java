@@ -1,5 +1,14 @@
 package by.epam.javatraining.koloshych.maintask01;
 
+/**
+ * This class is used by launching a calculation vector methods
+ * and by launching View class
+ *
+ * @author Kaloshych Katsiaryna
+ * @version 1.0
+ * @date 09/06/2019
+ */
+
 public class Vector {
     public static void main(String[] args) {
         double[] vector = {2.8, 6.8, 3.6, 9.0};
@@ -50,7 +59,7 @@ public class Vector {
         double[] sortedMerge = VectorUtil.doMergeSort(vector);
         View.printArray(sortedMerge);
 
-        int start = 0, end = vector.length-1;
+        int start = 0, end = vector.length - 1;
         double[] sortedQuick = VectorUtil.doQuickSort(vector, start, end);
         View.printArray(sortedQuick);
     }

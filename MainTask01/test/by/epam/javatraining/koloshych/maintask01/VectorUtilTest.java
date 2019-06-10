@@ -70,7 +70,7 @@ public class VectorUtilTest {
     @Test
     public void linearSearch() {
         double[] vector = {2.8, 6.8, 3.6, 9.0};
-        int number = 1;
+        double number = 6.8;
         int expected = 1;
         Assert.assertEquals(expected, VectorUtil.linearSearch(vector, number));
     }
