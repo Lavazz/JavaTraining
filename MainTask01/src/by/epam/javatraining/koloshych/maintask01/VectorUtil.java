@@ -32,6 +32,9 @@ public class VectorUtil {
 
 
     public static double countMax(double[] vector) {
+        if (vector == null || vector.length == 0) {
+            return -1;
+        }
         //variable max assign the first element of the array
         double max = vector[0];
         for (int i = 0; i < vector.length; i++) {
@@ -44,6 +47,9 @@ public class VectorUtil {
     }
 
     public static double countMin(double[] vector) {
+        if (vector == null || vector.length == 0) {
+            return -1;
+        }
         //variable min assign the first element of the array
         double min = vector[0];
         for (int i = 0; i < vector.length; i++) {
@@ -58,6 +64,9 @@ public class VectorUtil {
     //2. Find average values of vector
     // algorithm complexity O(n)
     public static double countAverageArithmetic(double[] vector) {
+        if (vector == null || vector.length == 0) {
+            return -1;
+        }
         double sum = 0.0;
         //sum all elements of array
         for (double i : vector) {
@@ -67,6 +76,9 @@ public class VectorUtil {
     }
 
     public static double countAverageGeometric(double[] vector) {
+        if (vector == null || vector.length == 0) {
+            return -1;
+        }
         double mul = 1;
         //multiply all elements of array
         for (double i : vector) {
@@ -189,6 +201,7 @@ public class VectorUtil {
         }
         return vector;
     }
+
     // algorithm complexity O(n^2) in the worst case
     public static double[] doInsertionSort(double[] vector) {
         for (int i = 1; i < vector.length; i++) {
