@@ -1,10 +1,36 @@
 package by.epam.javatraining.koloshych.maintask01;
 
 import java.util.Arrays;
+import java.util.Random;
+
+/**
+ * This class is used to process a vector
+ * It solves the following tasks:
+ * 1. Find extreme values
+ * 2. Find average values of vector
+ * 3. Check if array is sorted
+ * 4. Find first local extreme of array
+ * 5. Search the element of array
+ * 6. Revers elements of array
+ * 7. Implements sorting algorithms
+ *
+ * @author Kaloshych Katsiaryna
+ * @version 1.0
+ * @date 09/06/2019
+ */
 
 public class VectorUtil {
     //1. Find extreme values
     // algorithm complexity O(n)
+
+    //this way you can specify an array, but then in the test I will not know expected
+//        Random random=new Random();
+//        double [] vector=new double[8];
+//        for (int i = 0; i <vector.length ; i++) {
+//            vector[i]=random.nextDouble();
+//        }
+
+
     public static double countMax(double[] vector) {
         //variable max assign the first element of the array
         double max = vector[0];
