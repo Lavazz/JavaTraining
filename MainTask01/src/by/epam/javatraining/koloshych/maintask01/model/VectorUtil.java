@@ -20,18 +20,31 @@ import java.util.Random;
  */
 
 public class VectorUtil {
-    //1. Find extreme values
-    // algorithm complexity O(n)
 
-    //this way you can specify an array, but then in the test I will not know expected
-//        Random random=new Random();
-//        double [] vector=new double[8];
-//        for (int i = 0; i <vector.length ; i++) {
-//            vector[i]=random.nextDouble();
-//        }
+    /**
+     * This method creates a vector
+     *
+     * @param len - the length of the vector which you want to generate
+     * @return double[]
+     */
+       public static double[] createVector(int len){
+        Random random=new Random(2);
+        double [] vector=new double[len];
+        for (int i = 0; i <vector.length ; i++) {
+            vector[i]= random.nextDouble();
+        }
+        return vector;
+    }
 
 
-    public static double countMax(double[] vector) {
+    /**
+     * Find maximum value of the vector
+     *  algorithm complexity O(n)
+     *
+     * @param vector- is double array in which the maximum value will be searched
+     * @return double max value from array, or -1 if vector is error
+     */
+      public static double countMax(double[] vector) {
         if (vector == null || vector.length == 0) {
             return -1;
         }
@@ -46,6 +59,13 @@ public class VectorUtil {
         return max;
     }
 
+    /**
+     * Find minimum value of the vector
+     *  algorithm complexity O(n)
+     *
+     * @param vector - is double array in which the minimum value will be searched
+     * @return double min value from array, or -1 if vector is error
+     */
     public static double countMin(double[] vector) {
         if (vector == null || vector.length == 0) {
             return -1;
@@ -61,9 +81,14 @@ public class VectorUtil {
         return min;
     }
 
-    //2. Find average values of vector
-    // algorithm complexity O(n)
-    public static double countAverageArithmetic(double[] vector) {
+    /**
+     * Find average arithmetic of vector
+     *  algorithm complexity O(n)
+     *
+     * @param vector - is double array in which the average value will be searched
+     * @return double averageArithmetic value from array, or -1 if vector is error
+     */
+        public static double countAverageArithmetic(double[] vector) {
         if (vector == null || vector.length == 0) {
             return -1;
         }
@@ -75,6 +100,13 @@ public class VectorUtil {
         return sum / vector.length;
     }
 
+    /**
+     * Find average geometric of vector
+     *  algorithm complexity O(n)
+     *
+     * @param vector - is double array in which the average value will be searched
+     * @return double averageGeometric value from array, or -1 if vector is error
+     */
     public static double countAverageGeometric(double[] vector) {
         if (vector == null || vector.length == 0) {
             return -1;
@@ -87,9 +119,14 @@ public class VectorUtil {
         return Math.pow(mul, 1.0 / vector.length);
     }
 
-    //3. Check if array is sorted
-    // algorithm complexity O(n)
-    public static boolean isSortedIncreasing(double[] vector) {
+    /**
+     * Check if array is sorted increasing
+     *  algorithm complexity O(n)
+     *
+     * @param vector - is double array in which you want to check whether the sorted
+     * @return boolean value - result of checking
+     */
+       public static boolean isSortedIncreasing(double[] vector) {
         boolean result = true;
         for (int i = 0; i < vector.length - 1; i++) {
             // check if the array grows
@@ -100,6 +137,13 @@ public class VectorUtil {
         return result;
     }
 
+    /**
+     * Check if array is sorted
+     *  algorithm complexity O(n)
+     *
+     * @param vector - is double in which you want to check whether the sorted decreasing
+     * @return boolean value - result of checking
+     */
     public static boolean isSortedDecreasing(double[] vector) {
         boolean result = true;
         for (int i = 0; i < vector.length - 1; i++) {
@@ -111,9 +155,14 @@ public class VectorUtil {
         return result;
     }
 
-    //4. Find first local extreme of array
-    // algorithm complexity O(n)  in the worst case
-    public static int findLocalMin(double[] vector) {
+    /**
+     * Find first local minimum of array
+     * algorithm complexity O(n)  in the worst case
+     *
+     * @param vector - is double array in which search local min
+     * @return int index of element wich is local minimum, or -1 min is not founded
+     */
+        public static int findLocalMin(double[] vector) {
         for (int i = 1; i < vector.length - 1; i++) {
             //check if element is less than left and right elements
             if (vector[i - 1] > vector[i] && vector[i + 1] > vector[i]) {
@@ -123,6 +172,13 @@ public class VectorUtil {
         return -1;
     }
 
+    /**
+     * Find first local maximum of array
+     * algorithm complexity O(n)  in the worst case
+     *
+     * @param vector - is double array in which search local max
+     * @return int index of element, wich is local maximum, or -1 min is not founded
+     */
     public static int findLocalMax(double[] vector) {
         for (int i = 1; i < vector.length - 1; i++) {
             //check if element is more than left and right elements
@@ -133,9 +189,14 @@ public class VectorUtil {
         return -1;
     }
 
-    //5. Search the element of array
-    // algorithm complexity O(n) in the worst case for linearSearch
-    public static int linearSearch(double[] vector, double number) {
+    /**
+     * Search the element of array
+     * algorithm complexity O(n) in the worst case for linearSearch
+     *
+     * @param vector - is double array in which search  double number
+     * @return int index of number, or -1 min is not founded
+     */
+       public static int linearSearch(double[] vector, double number) {
         for (int i = 0; i < vector.length; i++) {
             if (vector[i] == number) {
                 return i;
@@ -144,8 +205,14 @@ public class VectorUtil {
         return -1;
     }
 
-    // algorithm complexity O(Log n) in the worst case for binarySearch
-    public static int binarySearch(double[] vector, double number) {
+    /**
+     * Search the element of array
+     * algorithm complexity O(Log n) in the worst case for binarySearch
+     *
+     * @param vector - is double array in which search  double number
+     * @return int index of number, or -1 min is not founded
+     */
+        public static int binarySearch(double[] vector, double number) {
         //sort the array
         doInsertionSort(vector);
         int firstIndex = 0;
@@ -171,9 +238,14 @@ public class VectorUtil {
         return -1;
     }
 
-    //6. Revers elements of array
-    // algorithm complexity O(n)
-    public static double[] reverserOrder(double[] vector) {
+    /**
+     * Revers elements of array
+     * algorithm complexity O(n)
+     *
+     * @param vector - is double array in which reverse order of elements
+     * @return double vector with reverses elements
+     */
+        public static double[] reverserOrder(double[] vector) {
         for (int i = 0; i < vector.length / 2; i++) {
             //swapping elements
             double temp = vector[i];
@@ -183,9 +255,14 @@ public class VectorUtil {
         return vector;
     }
 
-    //7. Implements sorting algorithms
-    // algorithm complexity O(n^2) in the worst case
-    public static double[] doBubbleSort(double[] vector) {
+    /**
+     * Implements Bubble sorting algorithm
+     * algorithm complexity O(n^2) in the worst case
+     *
+     * @param vector - is not sorted double array
+     * @return double sorted vector
+     */
+        public static double[] doBubbleSort(double[] vector) {
         boolean isSorted = false;
         while (!isSorted) {
             isSorted = true;
@@ -202,8 +279,14 @@ public class VectorUtil {
         return vector;
     }
 
-    // algorithm complexity O(n^2) in the worst case
-    public static double[] doInsertionSort(double[] vector) {
+    /**
+     * Implements Insertion sorting algorithm
+     * algorithm complexity O(n^2) in the worst case
+     *
+     * @param vector - is not sorted double array
+     * @return double sorted vector
+     */
+        public static double[] doInsertionSort(double[] vector) {
         for (int i = 1; i < vector.length; i++) {
             double currElem = vector[i];
             int prevKey = i - 1;
@@ -216,7 +299,13 @@ public class VectorUtil {
         return vector;
     }
 
-    // algorithm complexity O(n^2) in the worst case
+    /**
+     * Implements Selection sorting algorithm
+     * algorithm complexity O(n^2) in the worst case
+     *
+     * @param vector - is not sorted double array
+     * @return double sorted vector
+     */
     public static double[] doSelectionSort(double[] vector) {
         //in turn we will consider all the subsets of the array elements
         // (0 - last, 1-last, 2-last,...)
@@ -242,7 +331,14 @@ public class VectorUtil {
         return vector;
     }
 
-    // algorithm complexity O(n log n) in the worst case
+    /**
+     * Implements Merge sorting algorithm
+     *  algorithm complexity O(n log n) in the worst case
+     *
+     * @param vector - is not sorted double array
+     * @return double sorted vector
+     */
+
     public static double[] doMergeSort(double[] vector) {
         //array for sorting
         double[] buffer1 = Arrays.copyOf(vector, vector.length);
@@ -282,9 +378,15 @@ public class VectorUtil {
         return result;
     }
 
-    // algorithm complexity O(n^2) in the worst case, but average value  is O(n log N),
-    //in comparison with O(n^2) for Bubble , Insert, Selection sort
-    public static double[] doQuickSort(double[] vector, int start, int end) {
+    /**
+     * Implements Insertion sorting algorithm
+     * algorithm complexity O(n^2) in the worst case, but average value  is O(n log N),
+     *  in comparison with O(n^2) for Bubble , Insert, Selection sort
+     *
+     * @param vector - is not sorted double array , start of vector=0, end  is length of array
+     * @return double sorted vector
+     */
+        public static double[] doQuickSort(double[] vector, int start, int end) {
         int partition = partition(vector, start, end);
 
         if (partition - 1 > start) {
