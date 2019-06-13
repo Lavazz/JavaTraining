@@ -1,4 +1,7 @@
-package by.epam.javatraining.koloshych.lesson06.task05;
+package by.epam.javatraining.koloshych.lesson06.task05.controller;
+
+import by.epam.javatraining.koloshych.lesson06.task05.model.PrimeNumberLogic;
+import by.epam.javatraining.koloshych.lesson06.task05.view.View;
 
 public class PrimeNumber {
     public static void main(String[] args) {

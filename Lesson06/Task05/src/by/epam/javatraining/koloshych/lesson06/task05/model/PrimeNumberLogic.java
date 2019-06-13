@@ -1,4 +1,4 @@
-package by.epam.javatraining.koloshych.lesson06.task05;
+package by.epam.javatraining.koloshych.lesson06.task05.model;
 
 public class PrimeNumberLogic {
     public static boolean isPrime(int number) {

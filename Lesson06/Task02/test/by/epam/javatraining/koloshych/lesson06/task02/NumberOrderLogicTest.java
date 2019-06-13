@@ -1,4 +1,4 @@
-package by.epam.javatraining.koloshych.lesson06.task02;
+package by.epam.javatraining.koloshych.lesson06.task02.model;
 
 import org.junit.Assert;
 import org.junit.Test;

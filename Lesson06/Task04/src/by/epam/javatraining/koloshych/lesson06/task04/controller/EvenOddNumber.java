@@ -1,4 +1,7 @@
-package by.epam.javatraining.koloshych.lesson06.task04;
+package by.epam.javatraining.koloshych.lesson06.task04.controller;
+
+import by.epam.javatraining.koloshych.lesson06.task04.model.EvenOddNumberLogic;
+import by.epam.javatraining.koloshych.lesson06.task04.view.View;
 
 public class EvenOddNumber {
     public static void main(String[] args) {

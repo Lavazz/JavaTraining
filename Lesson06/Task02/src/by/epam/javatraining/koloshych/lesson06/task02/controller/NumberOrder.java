@@ -1,4 +1,7 @@
-package by.epam.javatraining.koloshych.lesson06.task02;
+package by.epam.javatraining.koloshych.lesson06.task02.controller;
+
+import by.epam.javatraining.koloshych.lesson06.task02.model.NumberOrderLogic;
+import by.epam.javatraining.koloshych.lesson06.task02.view.View;
 
 public class NumberOrder {
     public static void main(String[] args) {

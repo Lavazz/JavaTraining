@@ -1,4 +1,4 @@
-package by.epam.javatraining.koloshych.lesson06.task04;
+package by.epam.javatraining.koloshych.lesson06.task04.model;
 
 public class EvenOddNumberLogic {
     public static boolean isEven(int number) {

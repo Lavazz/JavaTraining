@@ -1,7 +1,11 @@
-package by.epam.javatraining.koloshych.maintask01;
+package by.epam.javatraining.koloshych.maintask01.model;
+
+import org.apache.log4j.Logger;
 
 import java.util.Arrays;
-import java.util.Random;
+
+//import by.epam.javatraining.koloshych.maintask01.model.exception.WrongArgumentsException;
+
 
 /**
  * This class is used to process a vector
@@ -21,31 +25,50 @@ import java.util.Random;
 
 public class VectorUtil {
 
-    /**
-     * This method creates a vector
-     *
-     * @param len - the length of the vector which you want to generate
-     * @return double[]
-     */
-       public static double[] createVector(int len){
-        Random random=new Random(2);
-        double [] vector=new double[len];
-        for (int i = 0; i <vector.length ; i++) {
-            vector[i]= random.nextDouble();
-        }
-        return vector;
-    }
+    private static final Logger LOGGER = Logger.getLogger(VectorUtil.class);
 
+
+//    /**
+//     * This method creates a vector
+//     *
+//     * @param len - the length of the vector which you want to generate
+//     * @return double[]
+//     */
+
+//    public static void createVector(int len) {
+//        Random random = new Random(2);
+//        double[] vector = new double[len];
+//        for (int i = 0; i < vector.length; i++) {
+//            vector[i] = random.nextDouble()*100;
+//        }
+//            }
+
+    /**
+     * This method check if the vector is valid
+     *
+     * @param vector - the length of the vector which you want to generate
+     * @return boolean
+     */
+
+    public static boolean checkVector(double[] vector) {
+        boolean valid = true;
+        if (vector == null || vector.length == 0) {
+            LOGGER.warn("Vector is invalid!");
+            valid = false;
+        }
+        return valid;
+    }
 
     /**
      * Find maximum value of the vector
-     *  algorithm complexity O(n)
+     * algorithm complexity O(n)
      *
      * @param vector- is double array in which the maximum value will be searched
      * @return double max value from array, or -1 if vector is error
      */
-      public static double countMax(double[] vector) {
-        if (vector == null || vector.length == 0) {
+    public static double countMax(double[] vector) {
+        boolean valid = checkVector(vector);
+        if (!valid) {
             return -1;
         }
         //variable max assign the first element of the array
@@ -56,18 +79,20 @@ public class VectorUtil {
                 max = vector[i];
             }
         }
+        LOGGER.info("Maximum value of vector" + Arrays.toString(vector) + "is: " + max);
         return max;
     }
 
     /**
      * Find minimum value of the vector
-     *  algorithm complexity O(n)
+     * algorithm complexity O(n)
      *
      * @param vector - is double array in which the minimum value will be searched
      * @return double min value from array, or -1 if vector is error
      */
     public static double countMin(double[] vector) {
-        if (vector == null || vector.length == 0) {
+        boolean valid = checkVector(vector);
+        if (!valid) {
             return -1;
         }
         //variable min assign the first element of the array
@@ -78,17 +103,18 @@ public class VectorUtil {
                 min = vector[i];
             }
         }
+        LOGGER.info("Minimum value of vector" + Arrays.toString(vector) + "is: " + min);
         return min;
     }
 
     /**
      * Find average arithmetic of vector
-     *  algorithm complexity O(n)
+     * algorithm complexity O(n)
      *
      * @param vector - is double array in which the average value will be searched
      * @return double averageArithmetic value from array, or -1 if vector is error
      */
-        public static double countAverageArithmetic(double[] vector) {
+    public static double countAverageArithmetic(double[] vector) {
         if (vector == null || vector.length == 0) {
             return -1;
         }
@@ -97,12 +123,13 @@ public class VectorUtil {
         for (double i : vector) {
             sum += i;
         }
+        LOGGER.info("Arithmetic average of vector" + Arrays.toString(vector) + "is: " + sum / vector.length);
         return sum / vector.length;
     }
 
     /**
      * Find average geometric of vector
-     *  algorithm complexity O(n)
+     * algorithm complexity O(n)
      *
      * @param vector - is double array in which the average value will be searched
      * @return double averageGeometric value from array, or -1 if vector is error
@@ -116,17 +143,19 @@ public class VectorUtil {
         for (double i : vector) {
             mul *= i;
         }
+        LOGGER.info("Geometric average of vector" + Arrays.toString(vector) + "is: "
+                + Math.pow(mul, 1.0 / vector.length));
         return Math.pow(mul, 1.0 / vector.length);
     }
 
     /**
      * Check if array is sorted increasing
-     *  algorithm complexity O(n)
+     * algorithm complexity O(n)
      *
      * @param vector - is double array in which you want to check whether the sorted
      * @return boolean value - result of checking
      */
-       public static boolean isSortedIncreasing(double[] vector) {
+    public static boolean isSortedIncreasing(double[] vector) {
         boolean result = true;
         for (int i = 0; i < vector.length - 1; i++) {
             // check if the array grows
@@ -134,12 +163,13 @@ public class VectorUtil {
                 result = false;
             }
         }
+        LOGGER.info("Vector is sorted: " + result);
         return result;
     }
 
     /**
      * Check if array is sorted
-     *  algorithm complexity O(n)
+     * algorithm complexity O(n)
      *
      * @param vector - is double in which you want to check whether the sorted decreasing
      * @return boolean value - result of checking
@@ -152,6 +182,7 @@ public class VectorUtil {
                 result = false;
             }
         }
+        LOGGER.info("Vector is sorted: " + result);
         return result;
     }
 
@@ -162,14 +193,19 @@ public class VectorUtil {
      * @param vector - is double array in which search local min
      * @return int index of element wich is local minimum, or -1 min is not founded
      */
-        public static int findLocalMin(double[] vector) {
+    public static int findLocalMin(double[] vector) {
+        int result = -1;
+//        if (vector == null || vector.length == 0) {
+//            result= -1;
+//       }
         for (int i = 1; i < vector.length - 1; i++) {
             //check if element is less than left and right elements
             if (vector[i - 1] > vector[i] && vector[i + 1] > vector[i]) {
-                return i;
+                result = i;
             }
         }
-        return -1;
+        LOGGER.info("Index of Local maximum is: " + result);
+        return result;
     }
 
     /**
@@ -186,6 +222,7 @@ public class VectorUtil {
                 return i;
             }
         }
+        //LOGGER.info("Index of Local maximum is: " + i);
         return -1;
     }
 
@@ -196,7 +233,7 @@ public class VectorUtil {
      * @param vector - is double array in which search  double number
      * @return int index of number, or -1 min is not founded
      */
-       public static int linearSearch(double[] vector, double number) {
+    public static int linearSearch(double[] vector, double number) {
         for (int i = 0; i < vector.length; i++) {
             if (vector[i] == number) {
                 return i;
@@ -212,7 +249,7 @@ public class VectorUtil {
      * @param vector - is double array in which search  double number
      * @return int index of number, or -1 min is not founded
      */
-        public static int binarySearch(double[] vector, double number) {
+    public static int binarySearch(double[] vector, double number) {
         //sort the array
         doInsertionSort(vector);
         int firstIndex = 0;
@@ -243,16 +280,18 @@ public class VectorUtil {
      * algorithm complexity O(n)
      *
      * @param vector - is double array in which reverse order of elements
-     * @return double vector with reverses elements
+     * @return void
      */
-        public static double[] reverserOrder(double[] vector) {
+    public static void reverserOrder(double[] vector) throws NullPointerException {
+        if (vector == null) {
+            LOGGER.warn("Vector is invalid!");
+        }
         for (int i = 0; i < vector.length / 2; i++) {
             //swapping elements
             double temp = vector[i];
             vector[i] = vector[vector.length - 1 - i];
             vector[vector.length - 1 - i] = temp;
         }
-        return vector;
     }
 
     /**
@@ -260,9 +299,13 @@ public class VectorUtil {
      * algorithm complexity O(n^2) in the worst case
      *
      * @param vector - is not sorted double array
-     * @return double sorted vector
+     * @return void
      */
-        public static double[] doBubbleSort(double[] vector) {
+    public static void doBubbleSort(double[] vector) throws NullPointerException {
+        if (vector == null) {
+            LOGGER.warn("Vector is invalid!");
+
+        }
         boolean isSorted = false;
         while (!isSorted) {
             isSorted = true;
@@ -276,7 +319,6 @@ public class VectorUtil {
                 }
             }
         }
-        return vector;
     }
 
     /**
@@ -284,9 +326,12 @@ public class VectorUtil {
      * algorithm complexity O(n^2) in the worst case
      *
      * @param vector - is not sorted double array
-     * @return double sorted vector
+     * @return void
      */
-        public static double[] doInsertionSort(double[] vector) {
+    public static void doInsertionSort(double[] vector) throws NullPointerException {
+        if (vector == null) {
+            LOGGER.warn("Vector is invalid!");
+        }
         for (int i = 1; i < vector.length; i++) {
             double currElem = vector[i];
             int prevKey = i - 1;
@@ -296,7 +341,6 @@ public class VectorUtil {
                 prevKey--;
             }
         }
-        return vector;
     }
 
     /**
@@ -306,7 +350,11 @@ public class VectorUtil {
      * @param vector - is not sorted double array
      * @return double sorted vector
      */
-    public static double[] doSelectionSort(double[] vector) {
+    public static void doSelectionSort(double[] vector) throws NullPointerException {
+        if (vector == null) {
+            LOGGER.warn("Vector is invalid!");
+            // throw new NullPointerException("vector==null");   -------------??????????
+        }
         //in turn we will consider all the subsets of the array elements
         // (0 - last, 1-last, 2-last,...)
         for (int i = 0; i < vector.length; i++) {
@@ -328,18 +376,20 @@ public class VectorUtil {
                 vector[min_i] = tmp;
             }
         }
-        return vector;
     }
 
     /**
      * Implements Merge sorting algorithm
-     *  algorithm complexity O(n log n) in the worst case
+     * algorithm complexity O(n log n) in the worst case
      *
      * @param vector - is not sorted double array
-     * @return double sorted vector
+     * @return void
      */
 
-    public static double[] doMergeSort(double[] vector) {
+    public static void doMergeSort(double[] vector) throws NullPointerException {
+        if (vector == null) {
+            LOGGER.warn("Vector is invalid!");
+        }
         //array for sorting
         double[] buffer1 = Arrays.copyOf(vector, vector.length);
         //buffer, with length= buffer1.length
@@ -347,7 +397,6 @@ public class VectorUtil {
         //start index-first index in buffer1
         // end index-last index in buffer1
         double[] result = mergeSortInner(buffer1, buffer2, 0, vector.length);
-        return result;
     }
 
     public static double[] mergeSortInner(double[] buffer1, double[] buffer2, int startIndex, int endIndex) {
@@ -381,12 +430,15 @@ public class VectorUtil {
     /**
      * Implements Insertion sorting algorithm
      * algorithm complexity O(n^2) in the worst case, but average value  is O(n log N),
-     *  in comparison with O(n^2) for Bubble , Insert, Selection sort
+     * in comparison with O(n^2) for Bubble , Insert, Selection sort
      *
      * @param vector - is not sorted double array , start of vector=0, end  is length of array
-     * @return double sorted vector
+     * @return void
      */
-        public static double[] doQuickSort(double[] vector, int start, int end) {
+    public static void doQuickSort(double[] vector, int start, int end) throws NullPointerException {
+        if (vector == null) {
+            LOGGER.warn("Vector is invalid!");
+        }
         int partition = partition(vector, start, end);
 
         if (partition - 1 > start) {
@@ -395,7 +447,6 @@ public class VectorUtil {
         if (partition + 1 < end) {
             doQuickSort(vector, partition + 1, end);
         }
-        return vector;
     }
 
     public static int partition(double[] vector, int start, int end) {
@@ -417,7 +468,7 @@ public class VectorUtil {
         return start;
     }
 
-    public static double[] quickSort(double[] vector, int low, int high) {
+    public static void quickSort(double[] vector, int low, int high) {
         if (vector == null || vector.length == 0) {
             // pick the pivot
             int middle = low + (high - low) / 2;
@@ -451,7 +502,7 @@ public class VectorUtil {
                 quickSort(vector, i, high);
             }
         }
-        return vector;
+
     }
 }
 

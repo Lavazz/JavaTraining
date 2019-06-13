@@ -1,4 +1,4 @@
-package by.epam.javatraining.koloshych.maintask01;
+package by.epam.javatraining.koloshych.maintask01.view;
 
 import java.util.Arrays;
 

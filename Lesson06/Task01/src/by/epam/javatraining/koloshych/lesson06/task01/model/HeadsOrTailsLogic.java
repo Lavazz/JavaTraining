@@ -1,4 +1,4 @@
-package by.epam.javatraining.koloshych.lesson06.task01;
+package by.epam.javatraining.koloshych.lesson06.task01.model;
 
 import java.util.Random;
 

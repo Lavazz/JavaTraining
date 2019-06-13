@@ -1,4 +1,4 @@
-package by.epam.javatraining.koloshych.lesson06.task02;
+package by.epam.javatraining.koloshych.lesson06.task02.view;
 
 public class View {
     public static void print(int number, String str, boolean result) {

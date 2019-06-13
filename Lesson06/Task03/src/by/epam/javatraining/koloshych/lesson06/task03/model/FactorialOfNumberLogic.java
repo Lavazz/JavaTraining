@@ -1,4 +1,4 @@
-package by.epam.javatraining.koloshych.lesson06.task03;
+package by.epam.javatraining.koloshych.lesson06.task03.model;
 
 public class FactorialOfNumberLogic {
     public static int countFactorial(int n) {

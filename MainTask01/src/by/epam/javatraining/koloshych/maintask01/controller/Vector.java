@@ -1,4 +1,7 @@
-package by.epam.javatraining.koloshych.maintask01;
+package by.epam.javatraining.koloshych.maintask01.controller;
+
+import by.epam.javatraining.koloshych.maintask01.model.VectorUtil;
+import by.epam.javatraining.koloshych.maintask01.view.View;
 
 /**
  * This class is used by launching a calculation vector methods
@@ -44,23 +47,20 @@ public class Vector {
         int binaryIndex = VectorUtil.binarySearch(vector, number);
         View.print(binaryIndex);
 
-        double[] reverserOrder = VectorUtil.reverserOrder(vector);
-        View.printArray(reverserOrder);
+        VectorUtil.reverserOrder(vector);
 
-        double[] sortedBooble = VectorUtil.doBubbleSort(vector);
-        View.printArray(sortedBooble);
+        VectorUtil.doBubbleSort(vector);
 
-        double[] sortedIncertion = VectorUtil.doInsertionSort(vector);
-        View.printArray(sortedIncertion);
+        VectorUtil.doInsertionSort(vector);
 
-        double[] sortedSelection = VectorUtil.doSelectionSort(vector);
-        View.printArray(sortedSelection);
+        VectorUtil.doSelectionSort(vector);
 
-        double[] sortedMerge = VectorUtil.doMergeSort(vector);
-        View.printArray(sortedMerge);
+        VectorUtil.doMergeSort(vector);
 
         int start = 0, end = vector.length - 1;
-        double[] sortedQuick = VectorUtil.doQuickSort(vector, start, end);
-        View.printArray(sortedQuick);
+        VectorUtil.doQuickSort(vector, start, end);
+
     }
 }
+
+
