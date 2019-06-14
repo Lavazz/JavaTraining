@@ -4,9 +4,6 @@ import org.apache.log4j.Logger;
 
 import java.util.Arrays;
 
-//import by.epam.javatraining.koloshych.maintask01.model.exception.WrongArgumentsException;
-
-
 /**
  * This class is used to process a vector
  * It solves the following tasks:
@@ -27,21 +24,6 @@ public class VectorUtil {
 
     private static final Logger LOGGER = Logger.getLogger(VectorUtil.class);
 
-
-//    /**
-//     * This method creates a vector
-//     *
-//     * @param len - the length of the vector which you want to generate
-//     * @return double[]
-//     */
-
-//    public static void createVector(int len) {
-//        Random random = new Random(2);
-//        double[] vector = new double[len];
-//        for (int i = 0; i < vector.length; i++) {
-//            vector[i] = random.nextDouble()*100;
-//        }
-//            }
 
     /**
      * This method check if the vector is valid
@@ -67,8 +49,7 @@ public class VectorUtil {
      * @return double max value from array, or -1 if vector is error
      */
     public static double countMax(double[] vector) {
-        boolean valid = checkVector(vector);
-        if (!valid) {
+        if (!checkVector(vector)) {
             return -1;
         }
         //variable max assign the first element of the array
@@ -79,7 +60,6 @@ public class VectorUtil {
                 max = vector[i];
             }
         }
-        LOGGER.info("Maximum value of vector" + Arrays.toString(vector) + "is: " + max);
         return max;
     }
 
@@ -91,8 +71,7 @@ public class VectorUtil {
      * @return double min value from array, or -1 if vector is error
      */
     public static double countMin(double[] vector) {
-        boolean valid = checkVector(vector);
-        if (!valid) {
+        if (!checkVector(vector)) {
             return -1;
         }
         //variable min assign the first element of the array
@@ -103,7 +82,6 @@ public class VectorUtil {
                 min = vector[i];
             }
         }
-        LOGGER.info("Minimum value of vector" + Arrays.toString(vector) + "is: " + min);
         return min;
     }
 
@@ -115,7 +93,7 @@ public class VectorUtil {
      * @return double averageArithmetic value from array, or -1 if vector is error
      */
     public static double countAverageArithmetic(double[] vector) {
-        if (vector == null || vector.length == 0) {
+        if (!checkVector(vector)) {
             return -1;
         }
         double sum = 0.0;
@@ -123,7 +101,6 @@ public class VectorUtil {
         for (double i : vector) {
             sum += i;
         }
-        LOGGER.info("Arithmetic average of vector" + Arrays.toString(vector) + "is: " + sum / vector.length);
         return sum / vector.length;
     }
 
@@ -135,7 +112,7 @@ public class VectorUtil {
      * @return double averageGeometric value from array, or -1 if vector is error
      */
     public static double countAverageGeometric(double[] vector) {
-        if (vector == null || vector.length == 0) {
+        if (!checkVector(vector)) {
             return -1;
         }
         double mul = 1;
@@ -143,8 +120,6 @@ public class VectorUtil {
         for (double i : vector) {
             mul *= i;
         }
-        LOGGER.info("Geometric average of vector" + Arrays.toString(vector) + "is: "
-                + Math.pow(mul, 1.0 / vector.length));
         return Math.pow(mul, 1.0 / vector.length);
     }
 
@@ -163,7 +138,6 @@ public class VectorUtil {
                 result = false;
             }
         }
-        LOGGER.info("Vector is sorted: " + result);
         return result;
     }
 
@@ -182,7 +156,6 @@ public class VectorUtil {
                 result = false;
             }
         }
-        LOGGER.info("Vector is sorted: " + result);
         return result;
     }
 
@@ -195,7 +168,7 @@ public class VectorUtil {
      */
     public static int findLocalMin(double[] vector) {
         int result = -1;
-//        if (vector == null || vector.length == 0) {
+//        if (vector == null || vector.length == 0) { ------------> в этом нету необходимости?
 //            result= -1;
 //       }
         for (int i = 1; i < vector.length - 1; i++) {
@@ -204,7 +177,6 @@ public class VectorUtil {
                 result = i;
             }
         }
-        LOGGER.info("Index of Local maximum is: " + result);
         return result;
     }
 
@@ -222,7 +194,6 @@ public class VectorUtil {
                 return i;
             }
         }
-        //LOGGER.info("Index of Local maximum is: " + i);
         return -1;
     }
 
@@ -304,6 +275,7 @@ public class VectorUtil {
     public static void doBubbleSort(double[] vector) throws NullPointerException {
         if (vector == null) {
             LOGGER.warn("Vector is invalid!");
+            // throw new NullPointerException("vector==null");   -------------??????????
 
         }
         boolean isSorted = false;
@@ -353,7 +325,6 @@ public class VectorUtil {
     public static void doSelectionSort(double[] vector) throws NullPointerException {
         if (vector == null) {
             LOGGER.warn("Vector is invalid!");
-            // throw new NullPointerException("vector==null");   -------------??????????
         }
         //in turn we will consider all the subsets of the array elements
         // (0 - last, 1-last, 2-last,...)
@@ -502,7 +473,6 @@ public class VectorUtil {
                 quickSort(vector, i, high);
             }
         }
-
     }
 }
 
