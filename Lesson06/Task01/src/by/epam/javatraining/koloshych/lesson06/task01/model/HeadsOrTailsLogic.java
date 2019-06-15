@@ -10,8 +10,7 @@ public class HeadsOrTailsLogic {
         count = count > 0 ? count : -count;
         int countHeads = 0;
         for (int i = 0; i <= count; i++) {
-            int result = random.nextInt(VARIANTS);
-            if (result == 0) {
+            if (random.nextInt(VARIANTS) == 0) {
                 countHeads++;
             }
         }

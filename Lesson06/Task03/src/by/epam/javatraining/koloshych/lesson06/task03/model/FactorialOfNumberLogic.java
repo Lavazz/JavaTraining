@@ -6,12 +6,10 @@ public class FactorialOfNumberLogic {
         if (n < 0) {
             return 0;
         }
-
-        if (n != 0 || n != 1) {
-            for (int i = 1; i <= n; i++) {
-                nFactorial *= i;
-            }
+        for (int i = 2; i <= n; i++) {
+            nFactorial *= i;
         }
+
         return nFactorial;
     }
 }
