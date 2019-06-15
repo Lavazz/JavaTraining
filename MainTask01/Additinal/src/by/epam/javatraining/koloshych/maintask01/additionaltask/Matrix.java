@@ -1,5 +1,9 @@
 package by.epam.javatraining.koloshych.maintask01.additionaltask;
 
+import org.apache.log4j.Logger;
+
+import java.util.Arrays;
+
 /**
  * This class is used by launching a calculation matrix methods
  * and by launching View class
@@ -11,29 +15,25 @@ package by.epam.javatraining.koloshych.maintask01.additionaltask;
 
 
 public class Matrix {
+
+    private static final Logger LOGGER = Logger.getLogger(Matrix.class);
+
     public static void main(String[] args) {
-        double[][] matrixSquare = {{1, 2, 5},
-                {4, 7, 6},
-                {9, 3, 8}};
 
         double[][] matrix = {{1, 2, 2, 1},
                 {4, 3, 3, 4},
                 {2, 3, 3, 2}};
 
-        double matrixMax = MatrixLogic.countMax(matrix);
-        View.print(matrixMax);
+        LOGGER.info("Maximum value of matrix is: " + MatrixLogic.findMax(matrix));
 
-        double matrixMin = MatrixLogic.countMin(matrix);
-        View.print(matrixMin);
+        LOGGER.info("Minimum value of matrix is: " + MatrixLogic.findMin(matrix));
 
-        boolean matrixSymetric = MatrixLogic.isSymmetric(matrix);
-        View.print(matrixSymetric);
+        LOGGER.info("Matrix is simetric:  " + MatrixLogic.isSymmetric(matrix));
 
-        String matrixLocalMin = MatrixLogic.isLocalMin(matrix);
-        View.print(matrixLocalMin);
+        LOGGER.info("Local maximum of matrix  is: " + MatrixLogic.isLocalMax(matrix));
 
-        double[][] transMatrix = MatrixLogic.transposeMatrix(matrix);
-        View.print(transMatrix);
+        LOGGER.info("Local minimum of matrix  is: " + MatrixLogic.isLocalMin(matrix));
+
+        LOGGER.info("Transpouse of matrix  is: " + Arrays.deepToString(MatrixLogic.transposeMatrix(matrix)));
     }
-
 }

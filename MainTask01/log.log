@@ -1,0 +1,101 @@
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [8.0, 72.0, 40.0, 67.0, 89.0, 50.0, 6.0, 19.0]
+2019-06-15 17:41:50 INFO  VectorRunning:38 - Maximum value of vectoris: 7
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [47.0, 68.0, 94.0, 86.0, 34.0, 14.0, 14.0, 16.0]
+2019-06-15 17:41:50 INFO  VectorRunning:40 - Minimum value of vectoris: 7
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [67.0, 99.0, 30.0, 31.0, 78.0, 47.0, 99.0, 42.0]
+2019-06-15 17:41:50 INFO  VectorRunning:42 - Arithmetic average of vectoris: 61.625
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [56.0, 14.0, 62.0, 35.0, 53.0, 62.0, 79.0, 26.0]
+2019-06-15 17:41:50 INFO  VectorRunning:44 - Geometric average of vectoris: 42.90475974285167
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [7.0, 50.0, 30.0, 24.0, 97.0, 15.0, 67.0, 88.0]
+2019-06-15 17:41:50 INFO  VectorRunning:46 - Vector is sorted: false
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [2.0, 55.0, 58.0, 19.0, 42.0, 40.0, 34.0, 83.0]
+2019-06-15 17:41:50 INFO  VectorRunning:48 - Vector is sorted: false
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [36.0, 67.0, 59.0, 66.0, 98.0, 31.0, 99.0, 9.0]
+2019-06-15 17:41:50 INFO  VectorRunning:50 - Index of Local minimum is: 5
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [58.0, 2.0, 70.0, 73.0, 14.0, 62.0, 94.0, 13.0]
+2019-06-15 17:41:50 INFO  VectorRunning:52 - Index of Local maximum is: 3
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [34.0, 56.0, 38.0, 26.0, 94.0, 47.0, 91.0, 36.0]
+2019-06-15 17:41:50 INFO  VectorRunning:54 - Index of searched number 6.8 is: -1
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [35.0, 88.0, 33.0, 71.0, 8.0, 23.0, 5.0, 19.0]
+2019-06-15 17:41:50 INFO  VectorRunning:57 - Index of searched number 6.8 is: -1
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [31.0, 93.0, 72.0, 92.0, 46.0, 65.0, 8.0, 37.0]
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [35.0, 2.0, 86.0, 35.0, 3.0, 49.0, 43.0, 67.0]
+2019-06-15 17:41:50 INFO  SortingOfVector:40 - Sorted vector is: [2.0, 3.0, 35.0, 35.0, 86.0, 49.0, 43.0, 67.0]
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [70.0, 64.0, 96.0, 66.0, 9.0, 79.0, 22.0, 57.0]
+2019-06-15 17:41:50 INFO  SortingOfVector:61 - Sorted vector is: [9.0, 22.0, 57.0, 64.0, 66.0, 70.0, 79.0, 96.0]
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [18.0, 4.0, 24.0, 57.0, 57.0, 47.0, 56.0, 11.0]
+2019-06-15 17:41:50 INFO  SortingOfVector:94 - Sorted vector is: [4.0, 11.0, 18.0, 24.0, 47.0, 56.0, 57.0, 57.0]
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [45.0, 0.0, 28.0, 38.0, 57.0, 32.0, 17.0, 15.0]
+2019-06-15 17:41:50 INFO  SortingOfVector:114 - Sorted vector is: [45.0, 0.0, 28.0, 38.0, 57.0, 32.0, 17.0, 15.0]
+2019-06-15 17:41:50 INFO  CreationOfVector:27 - Created vector is: [0.0, 97.0, 63.0, 94.0, 24.0, 67.0, 9.0, 39.0]
+2019-06-15 17:41:50 INFO  SortingOfVector:161 - Sorted vector is: [0.0, 9.0, 24.0, 39.0, 97.0, 67.0, 63.0, 94.0]
+2019-06-15 17:41:50 INFO  SortingOfVector:161 - Sorted vector is: [0.0, 9.0, 24.0, 39.0, 63.0, 67.0, 94.0, 97.0]
+2019-06-15 17:41:50 INFO  SortingOfVector:161 - Sorted vector is: [0.0, 9.0, 24.0, 39.0, 63.0, 67.0, 94.0, 97.0]
+2019-06-15 17:41:50 INFO  SortingOfVector:161 - Sorted vector is: [0.0, 9.0, 24.0, 39.0, 63.0, 67.0, 94.0, 97.0]
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [8.0, 72.0, 40.0, 67.0, 89.0, 50.0, 6.0, 19.0]
+2019-06-15 20:08:04 INFO  VectorRunning:38 - Maximum value of vectoris: 7
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [47.0, 68.0, 94.0, 86.0, 34.0, 14.0, 14.0, 16.0]
+2019-06-15 20:08:04 INFO  VectorRunning:40 - Minimum value of vectoris: 7
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [67.0, 99.0, 30.0, 31.0, 78.0, 47.0, 99.0, 42.0]
+2019-06-15 20:08:04 INFO  VectorRunning:42 - Arithmetic average of vectoris: 61.625
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [56.0, 14.0, 62.0, 35.0, 53.0, 62.0, 79.0, 26.0]
+2019-06-15 20:08:04 INFO  VectorRunning:44 - Geometric average of vectoris: 42.90475974285167
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [7.0, 50.0, 30.0, 24.0, 97.0, 15.0, 67.0, 88.0]
+2019-06-15 20:08:04 INFO  VectorRunning:46 - Vector is sorted: false
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [2.0, 55.0, 58.0, 19.0, 42.0, 40.0, 34.0, 83.0]
+2019-06-15 20:08:04 INFO  VectorRunning:48 - Vector is sorted: false
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [36.0, 67.0, 59.0, 66.0, 98.0, 31.0, 99.0, 9.0]
+2019-06-15 20:08:04 INFO  VectorRunning:50 - Index of Local minimum is: 5
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [58.0, 2.0, 70.0, 73.0, 14.0, 62.0, 94.0, 13.0]
+2019-06-15 20:08:04 INFO  VectorRunning:52 - Index of Local maximum is: 3
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [34.0, 56.0, 38.0, 26.0, 94.0, 47.0, 91.0, 36.0]
+2019-06-15 20:08:04 INFO  VectorRunning:54 - Index of searched number 6.8 is: -1
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [35.0, 88.0, 33.0, 71.0, 8.0, 23.0, 5.0, 19.0]
+2019-06-15 20:08:04 INFO  VectorRunning:57 - Index of searched number 6.8 is: -1
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [31.0, 93.0, 72.0, 92.0, 46.0, 65.0, 8.0, 37.0]
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [35.0, 2.0, 86.0, 35.0, 3.0, 49.0, 43.0, 67.0]
+2019-06-15 20:08:04 INFO  VectorRunning:62 - Reversed vector is: [31.0, 93.0, 72.0, 92.0, 46.0, 65.0, 8.0, 37.0]
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [70.0, 64.0, 96.0, 66.0, 9.0, 79.0, 22.0, 57.0]
+2019-06-15 20:08:04 INFO  VectorRunning:65 - Sorted vector is: [31.0, 93.0, 72.0, 92.0, 46.0, 65.0, 8.0, 37.0]
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [18.0, 4.0, 24.0, 57.0, 57.0, 47.0, 56.0, 11.0]
+2019-06-15 20:08:04 INFO  VectorRunning:68 - Sorted vector is: [31.0, 93.0, 72.0, 92.0, 46.0, 65.0, 8.0, 37.0]
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [45.0, 0.0, 28.0, 38.0, 57.0, 32.0, 17.0, 15.0]
+2019-06-15 20:08:04 INFO  VectorRunning:71 - Sorted vector is: [31.0, 93.0, 72.0, 92.0, 46.0, 65.0, 8.0, 37.0]
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [0.0, 97.0, 63.0, 94.0, 24.0, 67.0, 9.0, 39.0]
+2019-06-15 20:08:04 INFO  VectorRunning:74 - Sorted vector is: [31.0, 93.0, 72.0, 92.0, 46.0, 65.0, 8.0, 37.0]
+2019-06-15 20:08:04 INFO  CreationOfVector:27 - Created vector is: [7.0, 13.0, 81.0, 67.0, 97.0, 74.0, 35.0, 70.0]
+2019-06-15 20:08:04 INFO  VectorRunning:78 - Sorted vector is: [31.0, 93.0, 72.0, 92.0, 46.0, 65.0, 8.0, 37.0]
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [8.0, 72.0, 40.0, 67.0, 89.0, 50.0, 6.0, 19.0]
+2019-06-15 20:09:54 INFO  VectorRunning:38 - Maximum value of vectoris: 7
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [47.0, 68.0, 94.0, 86.0, 34.0, 14.0, 14.0, 16.0]
+2019-06-15 20:09:54 INFO  VectorRunning:40 - Minimum value of vectoris: 7
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [67.0, 99.0, 30.0, 31.0, 78.0, 47.0, 99.0, 42.0]
+2019-06-15 20:09:54 INFO  VectorRunning:42 - Arithmetic average of vectoris: 61.625
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [56.0, 14.0, 62.0, 35.0, 53.0, 62.0, 79.0, 26.0]
+2019-06-15 20:09:54 INFO  VectorRunning:44 - Geometric average of vectoris: 42.90475974285167
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [7.0, 50.0, 30.0, 24.0, 97.0, 15.0, 67.0, 88.0]
+2019-06-15 20:09:54 INFO  VectorRunning:46 - Vector is sorted: false
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [2.0, 55.0, 58.0, 19.0, 42.0, 40.0, 34.0, 83.0]
+2019-06-15 20:09:54 INFO  VectorRunning:48 - Vector is sorted: false
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [36.0, 67.0, 59.0, 66.0, 98.0, 31.0, 99.0, 9.0]
+2019-06-15 20:09:54 INFO  VectorRunning:50 - Index of Local minimum is: 5
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [58.0, 2.0, 70.0, 73.0, 14.0, 62.0, 94.0, 13.0]
+2019-06-15 20:09:54 INFO  VectorRunning:52 - Index of Local maximum is: 3
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [34.0, 56.0, 38.0, 26.0, 94.0, 47.0, 91.0, 36.0]
+2019-06-15 20:09:54 INFO  VectorRunning:54 - Index of searched number 6.8 is: -1
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [35.0, 88.0, 33.0, 71.0, 8.0, 23.0, 5.0, 19.0]
+2019-06-15 20:09:54 INFO  VectorRunning:57 - Index of searched number 6.8 is: -1
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [31.0, 93.0, 72.0, 92.0, 46.0, 65.0, 8.0, 37.0]
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [35.0, 2.0, 86.0, 35.0, 3.0, 49.0, 43.0, 67.0]
+2019-06-15 20:09:54 INFO  SortingOfVector:40 - Sorted vector is: [2.0, 3.0, 35.0, 35.0, 86.0, 49.0, 43.0, 67.0]
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [70.0, 64.0, 96.0, 66.0, 9.0, 79.0, 22.0, 57.0]
+2019-06-15 20:09:54 INFO  SortingOfVector:61 - Sorted vector is: [9.0, 22.0, 57.0, 64.0, 66.0, 70.0, 79.0, 96.0]
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [18.0, 4.0, 24.0, 57.0, 57.0, 47.0, 56.0, 11.0]
+2019-06-15 20:09:54 INFO  SortingOfVector:94 - Sorted vector is: [4.0, 11.0, 18.0, 24.0, 47.0, 56.0, 57.0, 57.0]
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [45.0, 0.0, 28.0, 38.0, 57.0, 32.0, 17.0, 15.0]
+2019-06-15 20:09:54 INFO  SortingOfVector:114 - Sorted vector is: [45.0, 0.0, 28.0, 38.0, 57.0, 32.0, 17.0, 15.0]
+2019-06-15 20:09:54 INFO  CreationOfVector:27 - Created vector is: [0.0, 97.0, 63.0, 94.0, 24.0, 67.0, 9.0, 39.0]
+2019-06-15 20:09:54 INFO  SortingOfVector:161 - Sorted vector is: [0.0, 9.0, 24.0, 39.0, 97.0, 67.0, 63.0, 94.0]
+2019-06-15 20:09:54 INFO  SortingOfVector:161 - Sorted vector is: [0.0, 9.0, 24.0, 39.0, 63.0, 67.0, 94.0, 97.0]
+2019-06-15 20:09:54 INFO  SortingOfVector:161 - Sorted vector is: [0.0, 9.0, 24.0, 39.0, 63.0, 67.0, 94.0, 97.0]
+2019-06-15 20:09:54 INFO  SortingOfVector:161 - Sorted vector is: [0.0, 9.0, 24.0, 39.0, 63.0, 67.0, 94.0, 97.0]

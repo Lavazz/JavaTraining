@@ -35,13 +35,13 @@ public class VectorRunning {
         double searchedNumber = 6.8;
 
 
-        LOGGER.info("Maximum value of vector" + "is: " + VectorCalculation.findMax(lengthOfVector));
+        LOGGER.info("Maximum value of vector is: " + VectorCalculation.findMax(lengthOfVector));
 
-        LOGGER.info("Minimum value of vector" + "is: " + VectorCalculation.findMin(lengthOfVector));
+        LOGGER.info("Minimum value of vector is: " + VectorCalculation.findMin(lengthOfVector));
 
-        LOGGER.info("Arithmetic average of vector" + "is: " + VectorCalculation.findAverageArithmetic(lengthOfVector));
+        LOGGER.info("Arithmetic average of vector is: " + VectorCalculation.findAverageArithmetic(lengthOfVector));
 
-        LOGGER.info("Geometric average of vector" + "is: " + VectorCalculation.findAverageGeometric(lengthOfVector));
+        LOGGER.info("Geometric average of vector is: " + VectorCalculation.findAverageGeometric(lengthOfVector));
 
         LOGGER.info("Vector is sorted: " + VectorCalculation.isSortedIncreasing(lengthOfVector));
 
